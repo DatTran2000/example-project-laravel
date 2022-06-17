@@ -15,6 +15,9 @@ class PostController extends Controller
      */
     public function index()
     {
+        $post = Post::whereTitle('3DS00OUIjs');
+
+        dd($post->pluck('id'));
         return Post::all();
     }
 
